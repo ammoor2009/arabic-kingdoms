@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الممالك اللغوية — تعلّم العربية</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>الممالك اللغوية</h1>
+    <p>أربع ممالك لتعلّم اللغة العربية خطوة بخطوة</p>
+  </header>
+
+  <main class="container">
+
+    <!-- الصفحة الرئيسية -->
+    <section id="home-view" class="view">
+      <div class="learner-bar">
+        <label for="learner-name">اسمك (يظهر في الشهادة):</label>
+        <input type="text" id="learner-name" placeholder="اكتب اسمك هنا" autocomplete="off">
+      </div>
+      <div class="kingdoms-grid" id="kingdoms-grid"></div>
+    </section>
+
+    <!-- صفحة الأسئلة -->
+    <section id="quiz-view" class="view hidden">
+      <div class="quiz-header">
+        <h2 id="quiz-kingdom-title"></h2>
+        <span class="progress" id="progress"></span>
+      </div>
+
+      <div class="question-card">
+        <p class="question-text" id="question-text"></p>
+        <div class="options" id="options"></div>
+        <div class="feedback hidden" id="feedback"></div>
+      </div>
+
+      <div class="quiz-actions">
+        <button id="next-btn" class="btn primary hidden" type="button">السؤال التالي</button>
+        <button id="back-home-btn" class="btn secondary" type="button">العودة للرئيسية</button>
+      </div>
+    </section>
+
+    <!-- صفحة النتيجة -->
+    <section id="result-view" class="view hidden">
+      <div class="result-card">
+        <h2>انتهى الاختبار</h2>
+        <p id="result-text"></p>
+        <div class="result-actions">
+          <button id="certificate-btn" class="btn primary" type="button">استعراض الشهادة</button>
+          <button id="replay-btn" class="btn secondary" type="button">إعادة اللعب</button>
+          <button id="result-home-btn" class="btn secondary" type="button">العودة للرئيسية</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <small>لعبة تعليمية بسيطة لتعليم اللغة العربية للناطقين بغيرها</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
