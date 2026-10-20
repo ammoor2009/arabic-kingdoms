@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>شهادة إتمام — الممالك اللغوية</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>الممالك اللغوية</h1>
+    <p>شهادة إتمام</p>
+  </header>
+
+  <main class="container">
+    <div class="certificate" id="certificate">
+      <h1>شهادة إتمام</h1>
+      <p>تشهد الممالك اللغوية بأن المتعلم</p>
+      <p class="cert-name" id="cert-name">—</p>
+      <p>قد أكمل اختبار</p>
+      <p class="cert-kingdom" id="cert-kingdom">—</p>
+      <p>بنتيجة</p>
+      <p class="cert-score" id="cert-score">—</p>
+      <p class="cert-date" id="cert-date">—</p>
+    </div>
+
+    <div class="cert-actions">
+      <button class="btn primary" type="button" onclick="window.print()">طباعة الشهادة</button>
+      <a class="btn secondary" href="index.html">العودة للرئيسية</a>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      const raw = localStorage.getItem("arabic_kingdoms_last_result");
+      if (!raw) return;
+      try {
+        const r = JSON.parse(raw);
+        document.getElementById("cert-name").textContent =
+          (r.learnerName || "").trim() || "المتعلم";
+        document.getElementById("cert-kingdom").textContent = r.kingdom || "—";
+        document.getElementById("cert-score").textContent =
+          `${r.score} من ${r.total} (${r.percent}%)`;
+        document.getElementById("cert-date").textContent = r.date || "";
+      } catch (e) {
+        console.error(e);
+      }
+    })();
+  </script>
+</body>
+</html>
