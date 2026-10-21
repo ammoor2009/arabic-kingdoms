@@ -6,7 +6,7 @@
 const CONFIG = {
   // اتركه فارغًا حتى تنشر Google Apps Script وتضع الرابط هنا.
   // مثال: "https://script.google.com/macros/s/XXXXXXXXXXXX/exec"
-  APPS_SCRIPT_URL: "",
+  APPS_SCRIPT_URL: "https://script.google.com/macros/s/AKfycbzOlO6FWryspAXI6su74V_M5wYRAeZkuoaf0kZNKd5KEFoiUer9XHlcrxJHcvEGMm3f7Q/exec",
   KINGDOMS: [
     { id: "nahw",      name: "مملكة النحو",     file: "questions/nahw.json" },
     { id: "sarf",      name: "مملكة الصرف",     file: "questions/sarf.json" },
